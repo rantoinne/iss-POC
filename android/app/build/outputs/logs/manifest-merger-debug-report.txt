@@ -1,0 +1,297 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:1:1-28:12
+INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:1:1-28:12
+INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:1:1-28:12
+INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:1:1-28:12
+MERGED from [:react-native-vector-icons] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-linear-gradient] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-linear-gradient/android/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-gesture-handler] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-camera] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-camera/android/build/intermediates/merged_manifests/generalDebug/processGeneralDebugManifest/merged/AndroidManifest.xml:2:1-18:12
+MERGED from [com.facebook.react:react-native:0.58.4] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/react-native-0.58.4.aar/f74f7e047b7f8652a682ad2f2aa5a50c/AndroidManifest.xml:2:1-15:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/86ca4c1f18913557c47a76825ac03ffb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-vision-17.0.2.aar/cd8cf92cfdcf54cad4d74bc3335975e1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:exifinterface:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/exifinterface-28.0.0.aar/25718162079cfc7d4c8c0fcf895b11ec/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-17.0.2.aar/2e46ac00e02e268e016f71e2b0445947/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-clearcut-16.0.0.aar/7589227b0ea60656a07832490f03e1da/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/e4efd871a31d5dcae582bf9f93a45dfd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-phenotype-16.0.0.aar/7307f1e3babeb109521609b32dc0c4fb/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/ce6dfcb18276038eeac3f0241ae7d341/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/74c24c4e97e28fcf5b70ef851bef5dc1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/bfb45d57348f13bc008d814f8afb5aab/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/e30c4cfe678ea5049e0efc9fc673ece9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/83c3c5aa1a1d1c6acc05a07dcf9f6af4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/680b9f62abc0dcc2e5c3ad9517cc8e3d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/a38d1d0204cf9d558198f91bfa0671a3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/81a39ac21ab355eca9bef3567e4cf792/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/9fa7441e82f69cb029dbab42d57feacb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/83838764a882061e0e8a5fac248a63d2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/f3cad102e431d320d90db2d1fcda3390/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/d9695726bbeece5555a4b158b18fc416/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/31a01d2e2ab87a8bbf8fb7bb91e6af64/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/87a08ff659f119ebce1017e1cb01248d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/392d7bfb31504a4f73d2e31903c55d42/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/d358485c7972ec8f5fba31b971572c00/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/1cd344785476b48e35cce7d577d3fc51/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/79350a93a23f560dc7de5b459785dcaf/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a7b90c33d9257749f020846bbddf54da/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a68d3d52866280c2b6db2158498c5d4a/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/5d9676186aabba56fb492ed18423b5b2/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/0847f6e3025c2c79b52958e0d8ca35e0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/c99431816cd980ba1afada04a1cf0aa2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/7ae610e518ae1d88cfb35d1803dc3ab2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/d8ef5df7849bb1de5d887087c9e77f68/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/140bb271086da474b658093093894e2f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/ac29b4cb8d3fed866304938683d9d7a0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/c38cbdc24d2118f6e3cf06d79d388f53/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/26b15c46e44ce22de73353c10122527e/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/63b0b33f2cddb8a72bcb7c1e4abecf76/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fresco:1.10.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/df8e4b47778cf8452d76a4a3a7d911b1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/b711e9089c04371c6081b6592a24871d/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:1.10.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/a040160269611163011158a1714f55f9/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/434a3ec4c3bd39faecab4a0a80b55718/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/ea13a7c24dbab7d5c23ba2eeecc75460/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/66341153e48b2c6b6628054a5dc51cff/AndroidManifest.xml:2:1-13:12
+MERGED from [org.webkit:android-jsc:r174650] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/1fe18bc6f96af7fef24d4afce177d8c9/AndroidManifest.xml:1:1-3:12
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/82aac88addd35bbd882ad7788aa0dd6b/AndroidManifest.xml:2:1-9:12
+INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:1:1-28:12
+INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:1:1-28:12
+INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:1:1-28:12
+	package
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:2:5-27
+		INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:1:1-28:12
+		INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:1:1-28:12
+		INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:5:5-77
+MERGED from [com.facebook.react:react-native:0.58.4] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/react-native-0.58.4.aar/f74f7e047b7f8652a682ad2f2aa5a50c/AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.58.4] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/react-native-0.58.4.aar/f74f7e047b7f8652a682ad2f2aa5a50c/AndroidManifest.xml:11:5-78
+	android:name
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:5:22-75
+application
+ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:7:5-26:19
+MERGED from [com.facebook.react:react-native:0.58.4] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/react-native-0.58.4.aar/f74f7e047b7f8652a682ad2f2aa5a50c/AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.react:react-native:0.58.4] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/react-native-0.58.4.aar/f74f7e047b7f8652a682ad2f2aa5a50c/AndroidManifest.xml:13:5-20
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-vision-17.0.2.aar/cd8cf92cfdcf54cad4d74bc3335975e1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-vision-17.0.2.aar/cd8cf92cfdcf54cad4d74bc3335975e1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-17.0.2.aar/2e46ac00e02e268e016f71e2b0445947/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-17.0.2.aar/2e46ac00e02e268e016f71e2b0445947/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-clearcut-16.0.0.aar/7589227b0ea60656a07832490f03e1da/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-clearcut-16.0.0.aar/7589227b0ea60656a07832490f03e1da/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-phenotype-16.0.0.aar/7307f1e3babeb109521609b32dc0c4fb/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-phenotype-16.0.0.aar/7307f1e3babeb109521609b32dc0c4fb/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/ce6dfcb18276038eeac3f0241ae7d341/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/ce6dfcb18276038eeac3f0241ae7d341/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/74c24c4e97e28fcf5b70ef851bef5dc1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/74c24c4e97e28fcf5b70ef851bef5dc1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/bfb45d57348f13bc008d814f8afb5aab/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/bfb45d57348f13bc008d814f8afb5aab/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-compat:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a7b90c33d9257749f020846bbddf54da/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a7b90c33d9257749f020846bbddf54da/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a68d3d52866280c2b6db2158498c5d4a/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a68d3d52866280c2b6db2158498c5d4a/AndroidManifest.xml:22:5-23:19
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/66341153e48b2c6b6628054a5dc51cff/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/66341153e48b2c6b6628054a5dc51cff/AndroidManifest.xml:11:5-20
+MERGED from [org.webkit:android-jsc:r174650] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/1fe18bc6f96af7fef24d4afce177d8c9/AndroidManifest.xml:2:3-17
+MERGED from [org.webkit:android-jsc:r174650] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/1fe18bc6f96af7fef24d4afce177d8c9/AndroidManifest.xml:2:3-17
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a7b90c33d9257749f020846bbddf54da/AndroidManifest.xml:22:18-91
+	android:label
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:9:7-39
+	android:roundIcon
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:11:7-52
+	android:icon
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:10:7-41
+	android:allowBackup
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:12:7-34
+	android:theme
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:13:7-38
+	android:name
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:8:7-38
+activity#com.feedback.MainActivity
+ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:14:7-24:18
+	android:screenOrientation
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:17:9-45
+	android:label
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:16:9-41
+	android:windowSoftInputMode
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:19:9-51
+	android:configChanges
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:18:9-79
+	android:name
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:15:9-37
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:20:9-23:25
+action#android.intent.action.MAIN
+ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:21:13-65
+	android:name
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:21:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:22:13-73
+	android:name
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:22:23-70
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:25:7-84
+	android:name
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:25:17-81
+uses-sdk
+INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-vector-icons] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-linear-gradient] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-linear-gradient/android/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-linear-gradient] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-linear-gradient/android/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-camera] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-camera/android/build/intermediates/merged_manifests/generalDebug/processGeneralDebugManifest/merged/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-camera] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-camera/android/build/intermediates/merged_manifests/generalDebug/processGeneralDebugManifest/merged/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.react:react-native:0.58.4] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/react-native-0.58.4.aar/f74f7e047b7f8652a682ad2f2aa5a50c/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.58.4] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/react-native-0.58.4.aar/f74f7e047b7f8652a682ad2f2aa5a50c/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/86ca4c1f18913557c47a76825ac03ffb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/86ca4c1f18913557c47a76825ac03ffb/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-vision-17.0.2.aar/cd8cf92cfdcf54cad4d74bc3335975e1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-vision-17.0.2.aar/cd8cf92cfdcf54cad4d74bc3335975e1/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:exifinterface:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/exifinterface-28.0.0.aar/25718162079cfc7d4c8c0fcf895b11ec/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/exifinterface-28.0.0.aar/25718162079cfc7d4c8c0fcf895b11ec/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-17.0.2.aar/2e46ac00e02e268e016f71e2b0445947/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-17.0.2.aar/2e46ac00e02e268e016f71e2b0445947/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-clearcut-16.0.0.aar/7589227b0ea60656a07832490f03e1da/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-clearcut-16.0.0.aar/7589227b0ea60656a07832490f03e1da/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/e4efd871a31d5dcae582bf9f93a45dfd/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/e4efd871a31d5dcae582bf9f93a45dfd/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-phenotype-16.0.0.aar/7307f1e3babeb109521609b32dc0c4fb/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-phenotype-16.0.0.aar/7307f1e3babeb109521609b32dc0c4fb/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/ce6dfcb18276038eeac3f0241ae7d341/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/ce6dfcb18276038eeac3f0241ae7d341/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/74c24c4e97e28fcf5b70ef851bef5dc1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/74c24c4e97e28fcf5b70ef851bef5dc1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/bfb45d57348f13bc008d814f8afb5aab/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.1.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/bfb45d57348f13bc008d814f8afb5aab/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/e30c4cfe678ea5049e0efc9fc673ece9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/e30c4cfe678ea5049e0efc9fc673ece9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/83c3c5aa1a1d1c6acc05a07dcf9f6af4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/83c3c5aa1a1d1c6acc05a07dcf9f6af4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/680b9f62abc0dcc2e5c3ad9517cc8e3d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/680b9f62abc0dcc2e5c3ad9517cc8e3d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/a38d1d0204cf9d558198f91bfa0671a3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/a38d1d0204cf9d558198f91bfa0671a3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/81a39ac21ab355eca9bef3567e4cf792/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/81a39ac21ab355eca9bef3567e4cf792/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/9fa7441e82f69cb029dbab42d57feacb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/9fa7441e82f69cb029dbab42d57feacb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/83838764a882061e0e8a5fac248a63d2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/83838764a882061e0e8a5fac248a63d2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/f3cad102e431d320d90db2d1fcda3390/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/f3cad102e431d320d90db2d1fcda3390/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/d9695726bbeece5555a4b158b18fc416/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/d9695726bbeece5555a4b158b18fc416/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/31a01d2e2ab87a8bbf8fb7bb91e6af64/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/31a01d2e2ab87a8bbf8fb7bb91e6af64/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/87a08ff659f119ebce1017e1cb01248d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/87a08ff659f119ebce1017e1cb01248d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/392d7bfb31504a4f73d2e31903c55d42/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/392d7bfb31504a4f73d2e31903c55d42/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/d358485c7972ec8f5fba31b971572c00/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/d358485c7972ec8f5fba31b971572c00/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/1cd344785476b48e35cce7d577d3fc51/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/1cd344785476b48e35cce7d577d3fc51/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/79350a93a23f560dc7de5b459785dcaf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/79350a93a23f560dc7de5b459785dcaf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a7b90c33d9257749f020846bbddf54da/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/a7b90c33d9257749f020846bbddf54da/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a68d3d52866280c2b6db2158498c5d4a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/a68d3d52866280c2b6db2158498c5d4a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/5d9676186aabba56fb492ed18423b5b2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/5d9676186aabba56fb492ed18423b5b2/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/0847f6e3025c2c79b52958e0d8ca35e0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/0847f6e3025c2c79b52958e0d8ca35e0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/c99431816cd980ba1afada04a1cf0aa2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/c99431816cd980ba1afada04a1cf0aa2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/7ae610e518ae1d88cfb35d1803dc3ab2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/7ae610e518ae1d88cfb35d1803dc3ab2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/d8ef5df7849bb1de5d887087c9e77f68/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/d8ef5df7849bb1de5d887087c9e77f68/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/140bb271086da474b658093093894e2f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/140bb271086da474b658093093894e2f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/ac29b4cb8d3fed866304938683d9d7a0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/ac29b4cb8d3fed866304938683d9d7a0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/c38cbdc24d2118f6e3cf06d79d388f53/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/c38cbdc24d2118f6e3cf06d79d388f53/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/26b15c46e44ce22de73353c10122527e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/26b15c46e44ce22de73353c10122527e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/63b0b33f2cddb8a72bcb7c1e4abecf76/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/63b0b33f2cddb8a72bcb7c1e4abecf76/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fresco:1.10.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/df8e4b47778cf8452d76a4a3a7d911b1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.10.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/df8e4b47778cf8452d76a4a3a7d911b1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/b711e9089c04371c6081b6592a24871d/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/b711e9089c04371c6081b6592a24871d/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.10.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/a040160269611163011158a1714f55f9/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.10.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/a040160269611163011158a1714f55f9/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/434a3ec4c3bd39faecab4a0a80b55718/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/434a3ec4c3bd39faecab4a0a80b55718/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/ea13a7c24dbab7d5c23ba2eeecc75460/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/ea13a7c24dbab7d5c23ba2eeecc75460/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/66341153e48b2c6b6628054a5dc51cff/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/66341153e48b2c6b6628054a5dc51cff/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/82aac88addd35bbd882ad7788aa0dd6b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/82aac88addd35bbd882ad7788aa0dd6b/AndroidManifest.xml:5:5-7:41
+INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.CAMERA
+ADDED from [:react-native-camera] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-camera/android/build/intermediates/merged_manifests/generalDebug/processGeneralDebugManifest/merged/AndroidManifest.xml:9:5-65
+	android:name
+		ADDED from [:react-native-camera] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-camera/android/build/intermediates/merged_manifests/generalDebug/processGeneralDebugManifest/merged/AndroidManifest.xml:9:22-62
+uses-feature#android.hardware.camera
+ADDED from [:react-native-camera] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-camera/android/build/intermediates/merged_manifests/generalDebug/processGeneralDebugManifest/merged/AndroidManifest.xml:11:5-13:36
+	android:required
+		ADDED from [:react-native-camera] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-camera/android/build/intermediates/merged_manifests/generalDebug/processGeneralDebugManifest/merged/AndroidManifest.xml:13:9-33
+	android:name
+		ADDED from [:react-native-camera] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-camera/android/build/intermediates/merged_manifests/generalDebug/processGeneralDebugManifest/merged/AndroidManifest.xml:12:9-47
+uses-feature#android.hardware.camera.autofocus
+ADDED from [:react-native-camera] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-camera/android/build/intermediates/merged_manifests/generalDebug/processGeneralDebugManifest/merged/AndroidManifest.xml:14:5-16:36
+	android:required
+		ADDED from [:react-native-camera] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-camera/android/build/intermediates/merged_manifests/generalDebug/processGeneralDebugManifest/merged/AndroidManifest.xml:16:9-33
+	android:name
+		ADDED from [:react-native-camera] /home/ayanwork/Ravi/RNApps/Feedback/node_modules/react-native-camera/android/build/intermediates/merged_manifests/generalDebug/processGeneralDebugManifest/merged/AndroidManifest.xml:15:9-57
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/ce6dfcb18276038eeac3f0241ae7d341/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/ce6dfcb18276038eeac3f0241ae7d341/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/ce6dfcb18276038eeac3f0241ae7d341/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/ce6dfcb18276038eeac3f0241ae7d341/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:16.1.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/bfb45d57348f13bc008d814f8afb5aab/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:16.1.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/bfb45d57348f13bc008d814f8afb5aab/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:16.1.0] /home/ayanwork/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/bfb45d57348f13bc008d814f8afb5aab/AndroidManifest.xml:24:13-58
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+IMPLIED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:1:1-28:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+uses-permission#android.permission.READ_PHONE_STATE
+IMPLIED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:1:1-28:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+IMPLIED from /home/ayanwork/Ravi/RNApps/Feedback/android/app/src/main/AndroidManifest.xml:1:1-28:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
