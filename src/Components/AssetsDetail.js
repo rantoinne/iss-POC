@@ -225,7 +225,7 @@ class AssetsDetail extends Component {
             return (
                 <View style= {{flex: 1, justifyContent: 'flex-start', alignItems: 'center'}}>
 
-                    <View style= {{flexDirection: 'row', justifyContent: 'center', backgroundColor: "#27345C", alignItems: 'center', padding: 12, width}}>
+                    <View style= {{flexDirection: 'row', justifyContent: 'center', backgroundColor: "#162D5C", alignItems: 'center', padding: 12, width}}>
                         <MaterialCommunityIcons 
                             onPress= {()=> this.props.navigation.navigate('ProfileScreen')}
                             name= "keyboard-backspace" color="white" size= {28} style= {{position: 'absolute', left: 10}} />

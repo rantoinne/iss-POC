@@ -79,7 +79,7 @@ class TaskFeedbackForm extends Component {
         .then((res)=> res.json())
         .then((response) => {
             // alert(JSON.stringify(response));
-            this.props.navigation.navigate('Pending', { reLoader: true });
+            this.props.navigation.navigate('TabNavigationSetup');
         });
     }
 
@@ -88,9 +88,9 @@ class TaskFeedbackForm extends Component {
         // alert(JSON.stringify(a))
         return (
             <View style= {{flex: 1, justifyContent: 'flex-start', alignItems: 'center'}}>
-                <View style= {{flexDirection: 'row', justifyContent: 'center', backgroundColor: "#27345C", alignItems: 'center', padding: 12, width}}>
+                <View style= {{flexDirection: 'row', justifyContent: 'center', backgroundColor: "#162D5C", alignItems: 'center', padding: 12, width}}>
                     <MaterialCommunityIcons 
-                        onPress= {()=> this.props.navigation.navigate('Pending')}
+                        onPress= {()=> this.props.navigation.navigate('TabNavigationSetup')}
                         name= "arrow-left" color="white" size= {28} style= {{position: 'absolute', left: 10}} />
                     <View style= {{flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around'}}>
                         <Text style={{color: 'white', fontFamily: 'Montserrat Medium', fontSize: 14, alignSelf: 'center' }}>

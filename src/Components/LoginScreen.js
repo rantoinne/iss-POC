@@ -4,6 +4,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 import Entypo from 'react-native-vector-icons/Entypo';
 const apiURL = require('../assets/variables/globals');
+import sha256 from 'js-sha256';
 
 const { width, height } = Dimensions.get('window');
 
@@ -61,7 +62,7 @@ class LoginScreen extends Component {
             var request = {};
 
             request["Email"] = this.state.userMail;
-            request["Password"] = this.state.password;
+            request["Password"] = sha256(this.state.password);
 
             fetch(`${apiURL.globals.api}/user/login`, {
                 method: 'POST',

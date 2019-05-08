@@ -1,5 +1,5 @@
 exports.globals = {
-    api: 'http://10.20.20.93:8000',
+    api: 'http://35.229.82.112:8000',
     dataDummy : [
         {
             id: 1,

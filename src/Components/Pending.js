@@ -11,6 +11,8 @@ import {
     TouchableOpacity, 
     Image,
     ActivityIndicator,
+    Animated,
+    FlatList,
     ToastAndroid,
     AsyncStorage,
     ScrollView } from 'react-native';
@@ -20,24 +22,12 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
 const apiURL = require('../assets/variables/globals');
-import CustomTab from './CustomTab';
+import ListRenderer from './ListRenderer';
+import { withNavigation } from 'react-navigation';
 
 const { width, height } = Dimensions.get('window');
 
 class Pending extends Component {
-
-    static navigationOptions = {
-        tabBarLabel: 'Pending',
-        tabBarIcon: ({ tintColor }) => (
-        <Entypo
-            name= 'stopwatch'
-            size= {25}
-            color= {tintColor}
-            style={{tintColor: tintColor}}
-        />
-        ),
-        headerVisible: false
-    };
 
     constructor(props) {
         super(props);
@@ -50,7 +40,9 @@ class Pending extends Component {
             loader: true,
             refreshing: false,
             statusLoader: false,
-            pendingCount: Number
+            pendingCount: Number,
+            scaleInnView: new Animated.ValueXY(0),
+            myIdx: -1
         };
     }
 
@@ -79,7 +71,7 @@ class Pending extends Component {
                     // alert(JSON.stringify(response.userData))
                     var array = [];
                     response.userData.map((item, index) => {
-                        if(item.Status === "Pending" || item.Status === "Scheduled") {
+                        if(item.Status === "Pending") {
                             array.push(item);
                         }
                         else {
@@ -95,7 +87,7 @@ class Pending extends Component {
 			}
             
 			else {
-                this.props.navigation.navigate('LoginScreen');
+                // this.props.navigation.navigate('LoginScreen');
             }
         });
     }
@@ -122,7 +114,7 @@ class Pending extends Component {
                     // alert(JSON.stringify(response.userData))
                     var array = [];
                     response.userData.map((item, index) => {
-                        if(item.Status === "Pending" || item.Status === "Scheduled") {
+                        if(item.Status === "Pending") {
                             array.push(item);
                         }
                         else {
@@ -149,13 +141,13 @@ class Pending extends Component {
                 .then((res)=> res.json())
                 .then((response) => {
                     this.setState({
-                        pendingCount: response.UserData.pendingStatus + response.UserData.scheduledStatus
+                        pendingCount: response.UserData.pendingStatus
                     });
                 });
 			}
             
 			else {
-                this.props.navigation.navigate('LoginScreen');
+                // this.props.navigation.navigate('LoginScreen');
             }
         });
 
@@ -173,6 +165,7 @@ class Pending extends Component {
             statusLoader: true
         });
 
+
         AsyncStorage.getItem('authToken').then((value) => {
 			if(value!== null) {
                 fetch(`${apiURL.globals.api}/user/countActivities/`, {
@@ -188,13 +181,13 @@ class Pending extends Component {
                 .then((res)=> res.json())
                 .then((response) => {
                     this.setState({
-                        pendingCount: response.UserData.pendingStatus + response.UserData.scheduledStatus
+                        pendingCount: response.UserData.pendingStatus
                     });
                 });
 			}
             
 			else {
-                this.props.navigation.navigate('LoginScreen');
+                // this.props.navigation.navigate('LoginScreen');
             }
         });
 
@@ -225,7 +218,7 @@ class Pending extends Component {
         this.setState({
             loader: true
         });
-        this.props.navigation.navigate('Scanner', { lengthForRandom : this.state.userActivitiesDataMain[index] });
+        this.props.navigation.navigate('Scanner', { lengthForRandom: this.state.userActivitiesDataMain[index] });
         this.setState({
             loader: false
         });
@@ -234,7 +227,7 @@ class Pending extends Component {
     showTaskCount() {
         if(this.state.pendingCount > 1) {
             ToastAndroid.showWithGravityAndOffset(
-                `${this.state.pendingCount} tasks are pending/scheduled`,
+                `${this.state.pendingCount} tasks are pending`,
                 ToastAndroid.SHORT,
                 ToastAndroid.BOTTOM,
                 0,
@@ -244,7 +237,7 @@ class Pending extends Component {
 
         else {
             ToastAndroid.showWithGravityAndOffset(
-                `${this.state.pendingCount} task is pending/scheduled`,
+                `${this.state.pendingCount} task is pending`,
                 ToastAndroid.SHORT,
                 ToastAndroid.BOTTOM,
                 0,
@@ -253,49 +246,54 @@ class Pending extends Component {
         }
     }
 
+    translate(idx, value) {
+        
+    }
+
     renderAllJobs(data) {
         return data.map((item, index)=> {
             return (
                 <TouchableNativeFeedback
                     onPress= {() => this.scanTaskQR(index)}
-                    background={TouchableNativeFeedback.Ripple('#27345C20')}>
-                <View style= {{width, paddingVertical: 10, paddingHorizontal: 10, marginTop: 1, borderBottomWidth: 1, borderColor: '#bdc3c7', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
-                    <View>
-                        <Text style={{color: 'black', fontFamily: 'Montserrat Bold', fontSize: 12, textAlign: 'left' }}>
-                            {item.ActivityName}
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-start', color: 'black', fontFamily: 'Montserrat Light', fontSize: 12 }}>
-                            {item.ActivityCode}
-                        </Text>
-                        <Text style={{color: 'black', fontFamily: 'Montserrat Light', fontSize: 12, alignSelf: 'flex-start' }}>
-                            {item.AssetCode}
-                        </Text>
-                        
-                        <View style= {{  flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
-                            <Text style={{color: 'black', fontFamily: 'Montserrat Medium', fontSize: 12, alignSelf: 'flex-start' }}>
-                                {this.truncate(item.StartDate === null ? item.ScheduleDate : item.StartDate)}
-                            </Text>
-                            {/* <Text style={{color: 'black', fontFamily: 'Montserrat Medium', fontSize: 12, alignSelf: 'flex-start' }}>
-                                {this.truncate(item.StartTime)}
-                            </Text> */}
-                        </View>
+                    background={TouchableNativeFeedback.Ripple('#EEC43C40')}>
+                    
+                        <View style= {styles.listOuterStyle}>
+                            <View>
+                                <Text style={{color: 'black', fontFamily: 'Montserrat Bold', fontSize: 12, textAlign: 'left' }}>
+                                    {item.ActivityName}
+                                </Text>
+                                <Text style={{ alignSelf: 'flex-start', color: 'black', fontFamily: 'Montserrat Light', fontSize: 12 }}>
+                                    {item.ActivityCode}
+                                </Text>
+                                <Text style={{color: 'black', fontFamily: 'Montserrat Light', fontSize: 12, alignSelf: 'flex-start' }}>
+                                    {item.AssetCode}
+                                </Text>
+                                
+                                <View style= {{  flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+                                    <Text style={{color: 'black', fontFamily: 'Montserrat Medium', fontSize: 12, alignSelf: 'flex-start' }}>
+                                        {this.truncate(item.StartDate === null ? item.ScheduleDate : item.StartDate)}
+                                    </Text>
+                                    {/* <Text style={{color: 'black', fontFamily: 'Montserrat Medium', fontSize: 12, alignSelf: 'flex-start' }}>
+                                        {this.truncate(item.StartTime)}
+                                    </Text> */}
+                                </View>
 
-                        <View style= {{  flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
-                            <Text style={{color: 'black', fontFamily: 'Montserrat Medium', fontSize: 12, alignSelf: 'flex-start' }}>
-                                {this.truncate(item.EndDate === null ? item.ScheduleDate : item.EndDate)}
-                            </Text>
-                            {/* <Text style={{color: 'black', fontFamily: 'Montserrat Medium', fontSize: 12, alignSelf: 'flex-start' }}>
-                                {this.truncate(item.EndTime)}
-                            </Text> */}
-                        </View>
-                    </View>
+                                <View style= {{  flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+                                    <Text style={{color: 'black', fontFamily: 'Montserrat Medium', fontSize: 12, alignSelf: 'flex-start' }}>
+                                        {this.truncate(item.EndDate === null ? item.ScheduleDate : item.EndDate)}
+                                    </Text>
+                                    {/* <Text style={{color: 'black', fontFamily: 'Montserrat Medium', fontSize: 12, alignSelf: 'flex-start' }}>
+                                        {this.truncate(item.EndTime)}
+                                    </Text> */}
+                                </View>
+                            </View>
 
-                    <View>
-                        <MaterialCommunityIcons 
-                            onPress= {() => this.props.navigation.navigate('Scanner', { lengthForRandom : this.state.userActivitiesDataMain[index] })}
-                            name= "qrcode-scan" color= "#30336b" size= {30} style= {{alignSelf: 'center', marginRight: 10}} /> 
-                    </View>
-                </View>
+                            <View>
+                                <MaterialCommunityIcons 
+                                    onPress= {() => this.props.navigation.navigate('Scanner', {lengthForRandom: this.state.userActivitiesDataMain[index]})}
+                                    name= "qrcode-scan" color= "#30336b" size= {30} style= {{alignSelf: 'center', marginRight: 10}} /> 
+                            </View>
+                        </View>
                 </TouchableNativeFeedback>
             )
         });
@@ -305,12 +303,14 @@ class Pending extends Component {
 
         if(this.state.loader) {
             return (
-                <View style= {{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                <View style= {{justifyContent: 'center', alignItems: 'center',width: '100%', height: height- 180}}>
 
+                    <View style= {{justifyContent: 'center', alignItems: 'center', width, height: height - 180}}>
                     <ActivityIndicator size= {30} color= "#30336b" style= {{alignSelf: 'center'}} />
                     <Text style={{color: '#27345C', fontFamily: 'Montserrat Medium', fontSize: 12, alignSelf: 'center' }}>
                         Loading..
                     </Text>
+                    </View>
 
                 </View>
             );
@@ -332,8 +332,8 @@ class Pending extends Component {
                     {
                         this.state.userActivitiesDataMain.length === 0 ? 
                         (
-                            <View>
-                                <Text style={{color: '#27345C', fontFamily: 'Montserrat Medium', fontSize: 14, alignSelf: 'center', marginTop: 40 }}>
+                            <View style= {{width: '100%'}}>
+                                <Text style={{color: '#27345C', fontFamily: 'Montserrat Medium', fontSize: 14, alignSelf: 'center', marginTop: 40, width, textAlign: 'center' }}>
                                     No Data!
                                 </Text>
                             </View>
@@ -341,21 +341,30 @@ class Pending extends Component {
                     }
                     </ScrollView>
                     
-                    <TouchableNativeFeedback
+                    {
+                        this.state.userActivitiesDataMain.length === 0 ? (
+                             null   
+                        ) : (<TouchableNativeFeedback
                         onPressOut= {()=> this.showTaskCount()}
                         background={TouchableNativeFeedback.Ripple('white')}>
-                        <View style= {{position: 'absolute', right: 10, bottom: 10, width: 40, height: 40, borderRadius: 20, justifyContent: 'center', alignItems: 'center', backgroundColor: '#27345C', elevation: 2}}>
+                        <View style= {{position: 'absolute', right: 0, bottom: -20, width: 70, height: 70, borderTopLeftRadius: 70, justifyContent: 'center', alignItems: 'center', backgroundColor: '#27345C', elevation: 4}}>
                             {
                                 this.state.statusLoader ? (
                                     <ActivityIndicator color= "white" size= {20} style= {{alignSelf: 'center'}} />
                                 ) : (
-                                    <Text style={{color: 'white', fontFamily: 'Montserrat Regular', fontSize: 14, alignSelf: 'center' }}>
+                                    <>
+                                    <Text style={{color: 'white', fontFamily: 'Montserrat Bold', fontSize: 16, marginLeft: 20, alignSelf: 'center' }}>
                                         {this.state.pendingCount}
                                     </Text>
+                                    <Text style={{color: 'white', fontFamily: 'Montserrat Bold', fontSize: 10, marginLeft: 20, alignSelf: 'center' }}>
+                                        tasks
+                                    </Text>
+                                    </>
                                 )
                             }
                         </View>
-                    </TouchableNativeFeedback>
+                    </TouchableNativeFeedback>)
+                    }
 
                 </View>
             )
@@ -376,6 +385,17 @@ const styles = StyleSheet.create({
 		borderColor: '#7f8fa6', 
 		elevation: 0.5
 	},
+    listOuterStyle: {
+        width, 
+        paddingVertical: 10, 
+        paddingHorizontal: 10, 
+        marginTop: 1, 
+        borderBottomWidth: 1, 
+        borderColor: '#bdc3c7', 
+        flexDirection: 'row', 
+        justifyContent: 'space-between', 
+        alignItems: 'center'
+    }
 })
 
-export default Pending;
+export default withNavigation(Pending);

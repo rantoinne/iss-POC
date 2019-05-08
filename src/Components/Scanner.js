@@ -16,6 +16,7 @@ import {
 import { RNCamera } from 'react-native-camera';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 const apiURL = require('../assets/variables/globals');
+import { withNavigation } from 'react-navigation';
 
 const {width, height} = Dimensions.get('window');
 class Scanner extends Component {
@@ -96,6 +97,7 @@ class Scanner extends Component {
         }
 
         else {
+            this.props.navigation.navigate('TabNavigationSetup');
             ToastAndroid.showWithGravityAndOffset(
                 'Please scan correct QR Code',
                 ToastAndroid.LONG,
@@ -103,7 +105,7 @@ class Scanner extends Component {
                 0,
                 50,
             );
-            this.props.navigation.navigate('Pending');
+            
         }
         
     }
@@ -111,7 +113,7 @@ class Scanner extends Component {
     componentDidMount() {
         // alert(JSON.stringify(this.props.navigation.state.params.lengthForRandom))
         BackHandler.addEventListener('hardwareBackPress', ()=> {
-            this.props.navigation.navigate('Pending');
+            this.props.navigation.navigate('TabNavigationSetup');
         });
     }
 
@@ -177,4 +179,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Scanner;
+export default withNavigation(Scanner);

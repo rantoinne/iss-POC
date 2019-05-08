@@ -1,5 +1,19 @@
 import React,  { Component } from 'react';
-import { View, Text, StyleSheet, TouchableNativeFeedback, Modal, ToastAndroid, BackHandler, TouchableWithoutFeedback, Dimensions, Alert, AsyncStorage, TouchableOpacity, Image, ScrollView } from 'react-native';
+import { 
+    View, 
+    Text, 
+    StyleSheet, 
+    TouchableNativeFeedback, 
+    Modal, 
+    ToastAndroid, 
+    BackHandler, 
+    TouchableWithoutFeedback, 
+    Dimensions, 
+    Alert, 
+    AsyncStorage, 
+    TouchableOpacity, 
+    Image, 
+    ScrollView } from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -9,7 +23,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Octicons from 'react-native-vector-icons/Octicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 const apiURL = require('../assets/variables/globals');
-import axios from 'axios';
+import LinearGradient from 'react-native-linear-gradient';
 
 const { width, height } = Dimensions.get('window');
 
@@ -134,9 +148,12 @@ class ProfileScreen extends Component {
             
             <View style= {{flexDirection: 'column', width, justifyContent: 'space-evenly', alignItems: 'center'}}>
 
-                <View style= {{width: '100%', justifyContent: 'space-evenly', alignItems: 'center', padding: 10, backgroundColor: '#27345C'}}>
+                <LinearGradient
+                    colors= {["#3AC1A2", "#162C5B"]}
+                    start={{ x: 0, y: 0 }} end={{ x: 0.7, y: 0 }}
+                    style= {{width: '100%', justifyContent: 'space-evenly', alignItems: 'center', padding: 10, backgroundColor: '#162D5C'}}>
 
-                    <View style= {{flexDirection: 'row', width: '100%', justifyContent: 'space-evenly', marginTop:10, alignItems: 'center', paddingHorizontal: 4, paddingVertical: 20, backgroundColor: '#27345C'}}>
+                    <View style= {{flexDirection: 'row', width: '100%', justifyContent: 'space-evenly', marginTop:10, alignItems: 'center', paddingHorizontal: 4, paddingVertical: 20, backgroundColor: 'transparent'}}>
 
                         <View style= {{ width: '20%', justifyContent: 'center', alignItems: 'center' }}>
                             <Image
@@ -227,7 +244,7 @@ class ProfileScreen extends Component {
                         </Modal>
 
                     </View>
-                </View>
+                </LinearGradient>
 
                 
 

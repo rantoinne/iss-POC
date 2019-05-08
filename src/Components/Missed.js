@@ -27,19 +27,6 @@ const { width, height } = Dimensions.get('window');
 
 class Missed extends Component {
 
-    static navigationOptions = {
-        tabBarLabel: 'Missed',
-        tabBarIcon: ({ tintColor }) => (
-        <Entypo
-            name= 'cross'
-            size= {25}
-            color= {tintColor}
-            style={{tintColor: tintColor}}
-        />
-        ),
-        header: null
-    };
-
     constructor(props) {
         super(props);
         this.state = {
@@ -82,7 +69,7 @@ class Missed extends Component {
 			}
             
 			else {
-                this.props.navigation.navigate('LoginScreen');
+                // this.props.navigation.navigate('LoginScreen');
             }
         });
 
@@ -126,7 +113,7 @@ class Missed extends Component {
 			}
             
 			else {
-                this.props.navigation.navigate('LoginScreen');
+                // this.props.navigation.navigate('LoginScreen');
             }
         });
 
@@ -188,7 +175,7 @@ class Missed extends Component {
 			}
             
 			else {
-                this.props.navigation.navigate('LoginScreen');
+                // this.props.navigation.navigate('LoginScreen');
             }
         });
 
@@ -252,7 +239,7 @@ class Missed extends Component {
             return (
                 <TouchableNativeFeedback
                     onPressOut= {() => this.showToast()}
-                    background={TouchableNativeFeedback.Ripple('#27345C20')}>
+                    background={TouchableNativeFeedback.Ripple('#f5365c40')}>
                 <View style= {{width, paddingVertical: 10, paddingHorizontal: 10, marginTop: 1, borderBottomWidth: 1, borderColor: '#bdc3c7', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
                     <View>
                         <Text style={{color: 'black', fontFamily: 'Montserrat Bold', fontSize: 12, textAlign: 'left' }}>
@@ -298,12 +285,14 @@ class Missed extends Component {
         // alert('jsbc')
         if(this.state.loader) {
             return (
-                <View style= {{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                <View style= {{flex: 1, justifyContent: 'center', alignItems: 'center',width: '100%', height}}>
 
-                    <ActivityIndicator size= {30} color= "#27345C" style= {{alignSelf: 'center', marginTop: 50}} />
+                    <View style= {{justifyContent: 'center', alignItems: 'center', width, height}}>
+                    <ActivityIndicator size= {30} color= "#30336b" style= {{alignSelf: 'center'}} />
                     <Text style={{color: '#27345C', fontFamily: 'Montserrat Medium', fontSize: 12, alignSelf: 'center' }}>
                         Loading..
                     </Text>
+                    </View>
 
                 </View>
             );
@@ -324,8 +313,8 @@ class Missed extends Component {
                     {
                         this.state.userActivitiesDataMain.length === 0 ? 
                             (
-                                <View>
-                                    <Text style={{color: '#27345C', fontFamily: 'Montserrat Medium', fontSize: 14, alignSelf: 'center', marginTop: 40 }}>
+                                <View style= {{width: '100%'}}>
+                                    <Text style={{color: '#27345C', textAlign: 'center', fontFamily: 'Montserrat Medium', fontSize: 14, alignSelf: 'center', marginTop: 40 }}>
                                         No Data!
                                     </Text>
                                 </View>
@@ -333,21 +322,30 @@ class Missed extends Component {
                     }
                     </ScrollView>            
                     
-                    <TouchableNativeFeedback
+                    {
+                        this.state.userActivitiesDataMain.length === 0 ? (
+                             null   
+                        ) : (<TouchableNativeFeedback
                         onPressOut= {()=> this.showTaskCount()}
                         background={TouchableNativeFeedback.Ripple('white')}>
-                        <View style= {{position: 'absolute', right: 10, bottom: 10, width: 40, height: 40, borderRadius: 20, justifyContent: 'center', alignItems: 'center', backgroundColor: '#27345C', elevation: 2}}>
+                        <View style= {{position: 'absolute', right: 0, bottom: -20, width: 70, height: 70, borderTopLeftRadius: 70, justifyContent: 'center', alignItems: 'center', backgroundColor: '#27345C', elevation: 4}}>
                             {
                                 this.state.statusLoader ? (
                                     <ActivityIndicator color= "white" size= {20} style= {{alignSelf: 'center'}} />
                                 ) : (
-                                    <Text style={{color: 'white', fontFamily: 'Montserrat Regular', fontSize: 14, alignSelf: 'center' }}>
+                                    <>
+                                    <Text style={{color: 'white', fontFamily: 'Montserrat Bold', fontSize: 16, marginLeft: 20, alignSelf: 'center' }}>
                                         {this.state.pendingCount}
                                     </Text>
+                                    <Text style={{color: 'white', fontFamily: 'Montserrat Bold', fontSize: 10, marginLeft: 20, alignSelf: 'center' }}>
+                                        tasks
+                                    </Text>
+                                    </>
                                 )
                             }
                         </View>
-                    </TouchableNativeFeedback>
+                    </TouchableNativeFeedback>)
+                    }
 
                 </View>
             )

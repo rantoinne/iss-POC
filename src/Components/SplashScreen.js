@@ -53,9 +53,9 @@ class Application extends Component {
 
     return (
       <View style={styles.container}>
-      <StatusBar backgroundColor="#27345C" barStyle="light-content" />
+      <StatusBar backgroundColor="#162D5C" animated barStyle="light-content" />
         <LinearGradient 
-          colors={['#27345C', '#30336b']}
+          colors={['#162D5C', '#30336b']}
           style= {{flex: 1, width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center'}}>
 
           <ActivityIndicator size= {40} color="#dcdde1" style= {{alignSelf: 'center'}} />

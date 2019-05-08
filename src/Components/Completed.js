@@ -20,24 +20,11 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
 const apiURL = require('../assets/variables/globals');
-import CustomTab from './CustomTab';
+import { withNavigation } from 'react-navigation';
 
 const { width, height } = Dimensions.get('window');
 
 class Completed extends Component {
-
-    static navigationOptions = {
-        tabBarLabel: 'Completed',
-        tabBarIcon: ({ tintColor }) => (
-            <Entypo
-                name= 'check'
-                size= {25}
-                color= {tintColor}
-                style={{tintColor: tintColor}}
-            />  
-        ),
-        headerVisible: false
-    };
 
     constructor(props) {
         super(props);
@@ -82,7 +69,7 @@ class Completed extends Component {
 			}
             
 			else {
-                this.props.navigation.navigate('LoginScreen');
+                // this.props.navigation.navigate('LoginScreen');
             }
         });
 
@@ -126,7 +113,7 @@ class Completed extends Component {
 			}
             
 			else {
-                this.props.navigation.navigate('LoginScreen');
+                // this.props.navigation.navigate('LoginScreen');
             }
         });
 
@@ -208,7 +195,7 @@ class Completed extends Component {
 			}
             
 			else {
-                this.props.navigation.navigate('LoginScreen');
+                // this.props.navigation.navigate('LoginScreen');
             }
         });
 
@@ -221,8 +208,8 @@ class Completed extends Component {
         return data.map((item, index)=> {
             return (
                 <TouchableNativeFeedback
-                    onPressOut= {() => this.props.navigation.navigate('ViewFeedbackForm', { data : this.state.userActivitiesDataMain[index] })}
-                    background={TouchableNativeFeedback.Ripple('#27345C20')}>
+                    onPress= {() => this.props.navigation.navigate('ViewFeedbackForm', { data : this.state.userActivitiesDataMain[index] })}
+                    background={TouchableNativeFeedback.Ripple('#2dce8940')}>
                 <View style= {{width, paddingVertical: 10, paddingHorizontal: 10, marginTop: 1, borderBottomWidth: 1, borderColor: '#bdc3c7', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
                     <View>
                         <Text style={{color: 'black', fontFamily: 'Montserrat Bold', fontSize: 12, textAlign: 'left' }}>
@@ -291,12 +278,15 @@ class Completed extends Component {
 
         if(this.state.loader) {
             return (
-                <View style= {{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                <View style= {{flex: 1, justifyContent: 'center', alignItems: 'center',width: '100%', height}}>
 
-                    <ActivityIndicator size= {30} color= "#27345C" style= {{alignSelf: 'center', marginTop: 50}} />
+                    
+                    <View style= {{justifyContent: 'center', alignItems: 'center', width, height}}>
+                    <ActivityIndicator size= {30} color= "#30336b" style= {{alignSelf: 'center'}} />
                     <Text style={{color: '#27345C', fontFamily: 'Montserrat Medium', fontSize: 12, alignSelf: 'center' }}>
                         Loading..
                     </Text>
+                    </View>
 
                 </View>
             );
@@ -318,8 +308,8 @@ class Completed extends Component {
                     {
                         this.state.userActivitiesDataMain.length === 0 ? 
                             (
-                                <View>
-                                    <Text style={{color: '#27345C', fontFamily: 'Montserrat Medium', fontSize: 14, alignSelf: 'center', marginTop: 40 }}>
+                                <View style= {{width: '100%'}}>
+                                    <Text style={{color: '#27345C', fontFamily: 'Montserrat Medium', textAlign: 'center', fontSize: 14, alignSelf: 'center', marginTop: 40 }}>
                                         No Data!
                                     </Text>
                                 </View>
@@ -327,21 +317,30 @@ class Completed extends Component {
                     }
                     </ScrollView>            
                     
-                    <TouchableNativeFeedback
+                    {
+                        this.state.userActivitiesDataMain.length === 0 ? (
+                             null   
+                        ) : (<TouchableNativeFeedback
                         onPressOut= {()=> this.showTaskCount()}
                         background={TouchableNativeFeedback.Ripple('white')}>
-                        <View style= {{position: 'absolute', right: 10, bottom: 10, width: 40, height: 40, borderRadius: 20, justifyContent: 'center', alignItems: 'center', backgroundColor: '#27345C', elevation: 2}}>
+                        <View style= {{position: 'absolute', right: 0, bottom: -20, width: 70, height: 70, borderTopLeftRadius: 70, justifyContent: 'center', alignItems: 'center', backgroundColor: '#27345C', elevation: 4}}>
                             {
                                 this.state.statusLoader ? (
                                     <ActivityIndicator color= "white" size= {20} style= {{alignSelf: 'center'}} />
                                 ) : (
-                                    <Text style={{color: 'white', fontFamily: 'Montserrat Regular', fontSize: 14, alignSelf: 'center' }}>
+                                    <>
+                                    <Text style={{color: 'white', fontFamily: 'Montserrat Bold', fontSize: 16, marginLeft: 20, alignSelf: 'center' }}>
                                         {this.state.pendingCount}
                                     </Text>
+                                    <Text style={{color: 'white', fontFamily: 'Montserrat Bold', fontSize: 10, marginLeft: 20, alignSelf: 'center' }}>
+                                        tasks
+                                    </Text>
+                                    </>
                                 )
                             }
                         </View>
-                    </TouchableNativeFeedback>
+                    </TouchableNativeFeedback>)
+                    }
 
                 </View>
             )
@@ -364,4 +363,4 @@ const styles = StyleSheet.create({
 	},
 })
 
-export default Completed;
+export default withNavigation(Completed);

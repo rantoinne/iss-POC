@@ -21,24 +21,11 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
 const apiURL = require('../assets/variables/globals');
-import CustomTab from './CustomTab';
+import { withNavigation } from 'react-navigation';
 
 const { width, height } = Dimensions.get('window');
 
 class Cancelled extends Component {
-
-    static navigationOptions = {
-        tabBarLabel: 'Cancelled',
-        tabBarIcon: ({ tintColor }) => (
-        <AntDesign
-            name= 'exclamation'
-            size= {25}
-            color= {tintColor}
-            style={{tintColor: tintColor}}
-        />
-        ),
-        headerVisible: false
-    };
 
     constructor(props) {
         super(props);
@@ -58,7 +45,7 @@ class Cancelled extends Component {
     showTaskCount() {
         if(this.state.pendingCount > 1) {
             ToastAndroid.showWithGravityAndOffset(
-                `${this.state.pendingCount} tasks are cancelled/incomplete`,
+                `${this.state.pendingCount} tasks are cancelled`,
                 ToastAndroid.SHORT,
                 ToastAndroid.BOTTOM,
                 0,
@@ -68,7 +55,7 @@ class Cancelled extends Component {
 
         else {
             ToastAndroid.showWithGravityAndOffset(
-                `${this.state.pendingCount} task is cancelled/incomplete`,
+                `${this.state.pendingCount} task is cancelled`,
                 ToastAndroid.SHORT,
                 ToastAndroid.BOTTOM,
                 0,
@@ -98,13 +85,13 @@ class Cancelled extends Component {
                 .then((response) => {
                     // alert(JSON.stringify(response.UserData))
                     this.setState({
-                        pendingCount: response.UserData.incompleteStatus
+                        pendingCount: response.UserData.cancelledStatus
                     });
                 });
 			}
             
 			else {
-                this.props.navigation.navigate('LoginScreen');
+                // this.props.navigation.navigate('LoginScreen');
             }
         });
 
@@ -134,7 +121,7 @@ class Cancelled extends Component {
                     // alert(JSON.stringify(response))
                     var array = [];
                     response.userData.map((item, index) => {
-                        if(item.Status === "Incomplete") {
+                        if(item.Status === "Cancelled") {
                             array.push(item);
                         }
                         else {
@@ -151,7 +138,7 @@ class Cancelled extends Component {
 			}
             
 			else {
-                this.props.navigation.navigate('LoginScreen');
+                // this.props.navigation.navigate('LoginScreen');
             }
         });
         
@@ -205,8 +192,9 @@ class Cancelled extends Component {
                 .then((res)=> res.json())
                 .then((response) => {
                     var array = [];
+                    // alert(JSON.stringify(response.userData))
                     response.userData.map((item, index) => {
-                        if(item.Status === "Incomplete") {
+                        if(item.Status === "Cancelled") {
                             array.push(item);
                         }
                         else {
@@ -236,13 +224,13 @@ class Cancelled extends Component {
                 .then((response) => {
                     // alert(JSON.stringify(response.UserData))
                     this.setState({
-                        pendingCount: response.UserData.incompleteStatus
+                        pendingCount: response.UserData.cancelledStatus
                     });
                 });
 			}
             
 			else {
-                this.props.navigation.navigate('LoginScreen');
+                // this.props.navigation.navigate('LoginScreen');
             }
         });
 
@@ -256,7 +244,7 @@ class Cancelled extends Component {
             return (
                 <TouchableNativeFeedback
                     onPress= {() => this.showToast()}
-                    background={TouchableNativeFeedback.Ripple('#27345C20')}>
+                    background={TouchableNativeFeedback.Ripple('#f5365c40')}>
                 <View style= {{width, paddingVertical: 10, paddingHorizontal: 10, marginTop: 1, borderBottomWidth: 1, borderColor: '#bdc3c7', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
                     <View>
                         <Text style={{color: 'black', fontFamily: 'Montserrat Bold', fontSize: 12, textAlign: 'left' }}>
@@ -301,12 +289,14 @@ class Cancelled extends Component {
     render() {
         if(this.state.loader) {
             return (
-                <View style= {{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                <View style= {{flex: 1, justifyContent: 'center', alignItems: 'center',width: '100%', height}}>
 
-                    <ActivityIndicator size= {30} color= "#27345C" style= {{alignSelf: 'center', marginTop: 50}} />
+                    <View style= {{justifyContent: 'center', alignItems: 'center', width, height}}>
+                    <ActivityIndicator size= {30} color= "#30336b" style= {{alignSelf: 'center'}} />
                     <Text style={{color: '#27345C', fontFamily: 'Montserrat Medium', fontSize: 12, alignSelf: 'center' }}>
                         Loading..
                     </Text>
+                    </View>
 
                 </View>
             );
@@ -328,8 +318,8 @@ class Cancelled extends Component {
                     {
                         this.state.userActivitiesDataMain.length === 0 ? 
                         (
-                            <View>
-                                <Text style={{color: '#27345C', fontFamily: 'Montserrat Medium', fontSize: 14, alignSelf: 'center', marginTop: 40 }}>
+                            <View style= {{width: '100%'}}>
+                                <Text style={{color: '#27345C', textAlign: 'center', fontFamily: 'Montserrat Medium', fontSize: 14, alignSelf: 'center', marginTop: 40 }}>
                                     No Data!
                                 </Text>
                             </View>
@@ -337,21 +327,31 @@ class Cancelled extends Component {
                     }
                     </ScrollView>
 
-                    <TouchableNativeFeedback
+                    {
+                        this.state.userActivitiesDataMain.length === 0 ? (
+                             null   
+                        ) : (<TouchableNativeFeedback
                         onPressOut= {()=> this.showTaskCount()}
                         background={TouchableNativeFeedback.Ripple('white')}>
-                        <View style= {{position: 'absolute', right: 10, bottom: 10, width: 40, height: 40, borderRadius: 20, justifyContent: 'center', alignItems: 'center', backgroundColor: '#27345C', elevation: 2}}>
+                        <View style= {{position: 'absolute', right: 0, bottom: -20, width: 70, height: 70, borderTopLeftRadius: 70, justifyContent: 'center', alignItems: 'center', backgroundColor: '#27345C', elevation: 4}}>
                             {
                                 this.state.statusLoader ? (
                                     <ActivityIndicator color= "white" size= {20} style= {{alignSelf: 'center'}} />
                                 ) : (
-                                    <Text style={{color: 'white', fontFamily: 'Montserrat Regular', fontSize: 14, alignSelf: 'center' }}>
+                                    <>
+                                    <Text style={{color: 'white', fontFamily: 'Montserrat Bold', fontSize: 16, marginLeft: 20, alignSelf: 'center' }}>
                                         {this.state.pendingCount}
                                     </Text>
+                                    <Text style={{color: 'white', fontFamily: 'Montserrat Bold', fontSize: 10, marginLeft: 20, alignSelf: 'center' }}>
+                                        tasks
+                                    </Text>
+                                    </>
                                 )
                             }
                         </View>
-                    </TouchableNativeFeedback>
+                    </TouchableNativeFeedback>)
+                    }
+                    
                     
                 </View>
             );
@@ -374,4 +374,4 @@ const styles = StyleSheet.create({
 	},
 })
 
-export default Cancelled;
+export default withNavigation(Cancelled);

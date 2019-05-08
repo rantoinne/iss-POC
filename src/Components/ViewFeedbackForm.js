@@ -40,12 +40,12 @@ class ViewFeedbackForm extends Component {
 
     componentDidMount() {
         BackHandler.addEventListener('hardwareBackPress', ()=> {
-            this.props.navigation.navigate('Completed');
+            this.props.navigation.navigate('TabNavigationSetup');
         });
     }
 
     submitFeedback() {
-        this.props.navigation.navigate('Completed');
+        this.props.navigation.navigate('TabNavigationSetup');
     }
 
     componentWillUnmount() {
@@ -84,12 +84,12 @@ class ViewFeedbackForm extends Component {
         // alert(JSON.stringify(a))
         return (
             <View style= {{flex: 1, justifyContent: 'flex-start', alignItems: 'center'}}>
-                <View style= {{flexDirection: 'row', justifyContent: 'center', backgroundColor: "#27345C", alignItems: 'center', padding: 12, width}}>
+                <View style= {{flexDirection: 'row', justifyContent: 'center', backgroundColor: "#162D5C", alignItems: 'center', padding: 12, width}}>
                     <MaterialCommunityIcons 
-                        onPress= {()=> this.props.navigation.navigate('Completed')}
-                        name= "keyboard-backspace" color="white" size= {28} style= {{position: 'absolute', left: 10}} />
+                        onPress= {()=> this.props.navigation.navigate('TabNavigationSetup')}
+                        name= "keyboard-backspace" color="white" size= {30} style= {{position: 'absolute', left: 10, zIndex: 1000}} />
                     <View style= {{flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around'}}>
-                        <Text style={{color: 'white', fontFamily: 'Montserrat Medium', fontSize: 16, alignSelf: 'center' }}>
+                        <Text style={{color: 'white', fontFamily: 'Montserrat Medium', fontSize: 16, alignSelf: 'center', textAlign: 'center' }}>
                             {a.AssetCode}
                         </Text>
                         <Text style={{color: 'white', fontFamily: 'Montserrat Medium', fontSize: 12, alignSelf: 'center' }}>

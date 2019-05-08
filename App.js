@@ -10,6 +10,7 @@ import TaskFeedbackForm from './src/Components/TaskFeedbackForm';
 import ViewFeedbackForm from './src/Components/ViewFeedbackForm';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
+import LinearGradient from 'react-native-linear-gradient';
 
 const AppContainer = createStackNavigator({
   SplashScreen : {
@@ -18,6 +19,31 @@ const AppContainer = createStackNavigator({
   LoginScreen : {
     screen: LoginScreen
   },
+  TabNavigationSetup : {
+    screen : TabNavigationSetup,
+    navigationOptions:({navigation})=> ({
+      header : (
+                <View
+                  style={{
+                    height: 60,
+                    padding: 18,
+                    backgroundColor: '#162D5C',
+                    width: '100%',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'space-between'
+                  }}
+                >
+                  <MaterialCommunityIcons name= "keyboard-backspace" onPress= {() => navigation.navigate('ProfileScreen')} size= {34} color= "white" style= {{alignSelf: 'center'}} />
+                  <Text style= {{fontFamily: 'Montserrat Regular', fontSize: 18, color: 'white'}}>Task Details</Text>
+                  <MaterialCommunityIcons 
+                    name= "qrcode-scan" size= {30} color= "white" style= {{alignSelf: 'center'}} />
+                </View>
+            )  
+    })
+  },
+  
+  
   ProfileScreen : {
     screen : ProfileScreen
   },
@@ -42,30 +68,6 @@ const AppContainer = createStackNavigator({
       headerVisible: false
     }
   },
-  TabNavigationSetup : {
-    screen : TabNavigationSetup,
-    navigationOptions:({navigation})=> ({
-      header : (
-                <View
-                  style={{
-                    height: 60,
-                    padding: 18,
-                    backgroundColor: '#27345C',
-                    width: '100%',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    justifyContent: 'space-between'
-                  }}
-                >
-                  <MaterialCommunityIcons name= "keyboard-backspace" onPress= {() => navigation.navigate('ProfileScreen')} size= {34} color= "white" style= {{alignSelf: 'center'}} />
-                  <Text style= {{fontFamily: 'Montserrat Regular', fontSize: 18, color: 'white'}}>Task Details</Text>
-                  <MaterialCommunityIcons 
-                    name= "qrcode-scan" size= {30} color= "white" style= {{alignSelf: 'center'}} />
-                </View>
-                )  
-    })
-  },
-  
 });
 
 const App = createAppContainer(AppContainer);
