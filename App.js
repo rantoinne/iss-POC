@@ -34,7 +34,7 @@ const AppContainer = createStackNavigator({
                     justifyContent: 'space-between'
                   }}
                 >
-                  <MaterialCommunityIcons name= "keyboard-backspace" onPress= {() => navigation.navigate('ProfileScreen')} size= {34} color= "white" style= {{alignSelf: 'center'}} />
+                  <MaterialCommunityIcons name= "keyboard-backspace" onPress= {() => navigation.navigate('ProfileScreen', { reload: true })} size= {34} color= "white" style= {{alignSelf: 'center'}} />
                   <Text style= {{fontFamily: 'Montserrat Regular', fontSize: 18, color: 'white'}}>Task Details</Text>
                   <MaterialCommunityIcons 
                     name= "qrcode-scan" size= {30} color= "white" style= {{alignSelf: 'center'}} />

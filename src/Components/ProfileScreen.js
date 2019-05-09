@@ -11,6 +11,8 @@ import {
     Dimensions, 
     Alert, 
     AsyncStorage, 
+    ActivityIndicator,
+    Animated,
     TouchableOpacity, 
     Image, 
     ScrollView } from 'react-native';
@@ -40,8 +42,72 @@ class ProfileScreen extends Component {
             email: '',
             Designation: '',
             userName: '',
-            showAssetDetails: false
+            showAssetDetails: false,
+            loaded: false
         };
+        this.animatedView = new Animated.Value(0);
+        this.animatedFirstRow = new Animated.Value(0);
+        this.animatedSecondRow = new Animated.Value(0);
+        this.animatedThirdRow = new Animated.Value(0);
+    }
+
+    componentWillMount() {
+        
+    }
+
+    async animateMyMainView() {
+        this.animatedView.setValue(0);
+        
+        Animated.spring(this.animatedView, {
+            toValue: 1,
+            duration: 1000,
+            friction: 8,
+            tension: 10,
+            useNativeDriver: true
+        }).start();
+        
+            for(var i=0; i<3; i++) {
+            if(i === 0) {
+                this.animatedFirstRow.setValue(0);
+
+                Animated.spring(this.animatedFirstRow, {
+                    toValue: 1,
+                    duration: 800,
+                    friction: 6,
+                    tension: 10,
+                }).start();
+            }
+
+            if(i === 1) {
+                this.animatedSecondRow.setValue(0);
+                
+                Animated.sequence([
+                    Animated.delay(i*100),
+
+                    Animated.spring(this.animatedSecondRow, {
+                        toValue: 1,
+                        duration: 800,
+                        friction: 6,
+                        tension: 10,
+                    })
+                ]).start();
+            }
+
+            if(i === 2) {
+                this.animatedThirdRow.setValue(0);
+                Animated.sequence([
+                    Animated.delay(i*100),
+
+                    Animated.spring(this.animatedThirdRow, {
+                        toValue: 1,
+                        duration: 800,
+                        friction: 6,
+                        tension: 10,
+                    })
+                ]).start();
+            }            
+        }
+        
     }
 
     async componentDidMount() {
@@ -52,6 +118,9 @@ class ProfileScreen extends Component {
         // alert('hsh')
         AsyncStorage.getItem('token').then((value) => {
             if(value!== null) {
+                this.setState({
+                    loaded: true
+                });
                 // alert(value)
                 fetch(`${apiURL.globals.api}/userData/get`, {
                     method: 'POST',
@@ -70,8 +139,10 @@ class ProfileScreen extends Component {
                         address: response.UserData.userAddress,
                         userName: response.UserData.userName,
                         email : response.UserData.Email,
-                        designation : response.UserData.designation
+                        designation : response.UserData.designation,
+                        loaded: false
                     });
+                    this.animateMyMainView();
                 });
 			}
 
@@ -79,7 +150,7 @@ class ProfileScreen extends Component {
 				this.setState({token: null});
 			}
 		});
-
+        
     }
 
     logOut =async()=>{
@@ -141,17 +212,56 @@ class ProfileScreen extends Component {
 		});
     }
 
+    componentDidUnmount() {
+                
+        this.animatedView.setValue(0);
+        this.animatedFirstRow.setValue(0);
+        this.animatedSecondRow.setValue(0);
+        this.animatedThirdRow.setValue(0);
+        this.setState({
+            loaded: false
+        });
+    }
+
     render() {
-        return (
+        if(this.state.loaded) {
+            return(
+                <View style= {{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                    <ActivityIndicator size= {30} color="#162C5B" style= {{alignSelf: 'center'}} />
+                    <Text style= {{fontFamily: 'Montserrat Bold', color: "#162C5B", fontSize: 12, marginTop: 20}}>Loading..</Text>
+                </View>
+            );
+        }
+
+        else {
+            return(
             <View style= { styles.container }>
 
             
             <View style= {{flexDirection: 'column', width, justifyContent: 'space-evenly', alignItems: 'center'}}>
-
+                
                 <LinearGradient
-                    colors= {["#3AC1A2", "#162C5B"]}
+                    colors= {["#16c4a5", "#00295b"]}
                     start={{ x: 0, y: 0 }} end={{ x: 0.7, y: 0 }}
                     style= {{width: '100%', justifyContent: 'space-evenly', alignItems: 'center', padding: 10, backgroundColor: '#162D5C'}}>
+
+                    <Animated.View style= {{
+                        backfaceVisibility: 'hidden',
+                        transform: [
+                            {
+                                scale: this.animatedView.interpolate({
+                                    inputRange: [0,1],
+                                    outputRange: [0.2, 1]
+                                })
+                            },
+                            {
+                                translateY: this.animatedView.interpolate({
+                                    inputRange: [0,1],
+                                    outputRange: [-300, 1]
+                                })
+                            }
+                        ]
+                    }}>
 
                     <View style= {{flexDirection: 'row', width: '100%', justifyContent: 'space-evenly', marginTop:10, alignItems: 'center', paddingHorizontal: 4, paddingVertical: 20, backgroundColor: 'transparent'}}>
 
@@ -244,14 +354,33 @@ class ProfileScreen extends Component {
                         </Modal>
 
                     </View>
+                    </Animated.View>
                 </LinearGradient>
+                
 
                 
 
                 <View style= {{flexDirection: 'column', width: '100%', justifyContent: 'space-evenly', alignItems: 'center', paddingVertical: 20, marginTop: 20}}>
 
+                    <Animated.View style= {{
+                        backfaceVisibility: 'hidden',
+                        width: '100%',
+                        transform: [
+                            {
+                                scale: this.animatedFirstRow.interpolate({
+                                    inputRange: [0,1],
+                                    outputRange: [0.01, 1]
+                                })
+                            },
+                            {
+                                translateY: this.animatedFirstRow.interpolate({
+                                    inputRange: [0,1],
+                                    outputRange: [1000, 1]
+                                })
+                            }
+                        ]
+                    }}>
                     <View style= {{flexDirection: 'row', width: '100%', justifyContent: 'space-around', alignItems: 'center', paddingVertical: 10}}>
-
                         <TouchableNativeFeedback
                             onPressOut= {()=> this.props.navigation.navigate('AssetsDetail')}
                             background={TouchableNativeFeedback.Ripple('#27345C20')}>
@@ -308,7 +437,26 @@ class ProfileScreen extends Component {
                             </View>
                         </TouchableNativeFeedback>
                     </View>
+                    </Animated.View>
 
+                    <Animated.View style= {{
+                        backfaceVisibility: 'hidden',
+                        width: '100%',
+                        transform: [
+                            {
+                                scale: this.animatedSecondRow.interpolate({
+                                    inputRange: [0,1],
+                                    outputRange: [0.01, 1]
+                                })
+                            },
+                            {
+                                translateY: this.animatedSecondRow.interpolate({
+                                    inputRange: [0,1],
+                                    outputRange: [1000, 1]
+                                })
+                            }
+                        ]
+                    }}>
                     <View style= {{flexDirection: 'row', width: '100%', justifyContent: 'space-around', alignItems: 'center', paddingVertical: 10}}>
                         
                         <TouchableNativeFeedback
@@ -355,9 +503,30 @@ class ProfileScreen extends Component {
                             </View>
                             </View>
                         </TouchableNativeFeedback>
+                        
                     </View>
+                    </Animated.View>
 
+                    <Animated.View style= {{
+                        backfaceVisibility: 'hidden',
+                        width: '100%',
+                        transform: [
+                            {
+                                scale: this.animatedThirdRow.interpolate({
+                                    inputRange: [0,1],
+                                    outputRange: [0.01, 1]
+                                })
+                            },
+                            {
+                                translateY: this.animatedThirdRow.interpolate({
+                                    inputRange: [0,1],
+                                    outputRange: [1000, 1]
+                                })
+                            }
+                        ]
+                    }}>
                     <View style= {{flexDirection: 'row', width: '100%', justifyContent: 'space-around', alignItems: 'center', paddingVertical: 10}}>
+                        
                         <TouchableNativeFeedback
                             onPressOut= {()=> this.callme()}
                             background={TouchableNativeFeedback.Ripple('#27345C20')}>
@@ -404,6 +573,7 @@ class ProfileScreen extends Component {
                         </TouchableNativeFeedback>
                         
                     </View>
+                    </Animated.View>
 
                 </View>
 
@@ -411,6 +581,7 @@ class ProfileScreen extends Component {
 
             </View>
         );
+        }
     }
 }
 

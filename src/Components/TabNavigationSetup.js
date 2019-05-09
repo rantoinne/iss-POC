@@ -75,6 +75,7 @@ class TabNavigationSetup extends Component {
     }
 
     renderAnimation(index) {
+        this.refs.tabBar.scrollTo({ x: (( (( index - 1 ) + 1) - 1 ) * width ), y: 0, animated: true });
         if(index === 0) {
 
             this.incompleteAnimation.setValue(0);
@@ -199,16 +200,9 @@ class TabNavigationSetup extends Component {
         }
 
         this.setIdx(idx);
+        this.refs.tabBar.scrollTo({ x: (( (( idx - 1 ) + 1) - 1 ) * width ), y: 0, animated: true });
 
         this.renderAnimation(idx);
-
-        // if(idx >= 4 || idx <=1) {
-            this.refs.tabBar.scrollTo({ x: (( (( idx - 1 ) + 1) - 1 ) * width ), y: 0, animated: true });
-        // }
-        // else {
-
-        // }
-        // this.refs.tabBar.scrollTo({ x: (( (( idx - 1 ) + 1) - 1 ) * width ), y: 0, animated: false });
 
     }
 
@@ -244,8 +238,8 @@ class TabNavigationSetup extends Component {
                                         }
                                     ]
                                 }}>
-                                <MaterialCommunityIcons
-                                    name= 'account-clock'
+                                <AntDesign
+                                    name= 'calendar'
                                     size= {22}
                                     color= "white"
                                     style={{alignSelf: 'center'}}
@@ -477,7 +471,7 @@ class TabNavigationSetup extends Component {
                     </ScrollView>
                 </View>
 
-                <ScrollView ref= "tabView" onMomentumScrollEnd= {this.scrollEventCapture} horizontal pagingEnabled showsHorizontalScrollIndicator= {false} >
+                <ScrollView ref= "tabView" onMomentumScrollEnd = {this.scrollEventCapture} horizontal pagingEnabled showsHorizontalScrollIndicator= {false} >
                     {
                         this.screenRenderForTabs()
                     }
@@ -555,7 +549,7 @@ const styles = StyleSheet.create({
         padding: 8, 
         width: 100, 
         elevation: 8,
-        backgroundColor: '#f5365c', 
+        backgroundColor: 'gray', 
         height: 60,
         justifyContent: 'center', 
         alignItems: 'center', 
